@@ -1,30 +1,25 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const PortfolioApp());
+  runApp(const MaterialApp(
+    home: Home(),
+  ));
 }
 
-class PortfolioApp extends StatelessWidget {
-  const PortfolioApp({super.key});
+class Home extends StatelessWidget {
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: RootPage(),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Portfolio'),
+        centerTitle: true,
+        backgroundColor: Colors.blueGrey[300],
+      ),
+      body: const Center(
+        child: Text('My portfolio'),
+      ),
     );
-  }
-}
-
-class RootPage extends StatefulWidget {
-  const RootPage({super.key});
-
-  @override
-  State<RootPage> createState() => _RootPageState();
-}
-
-class _RootPageState extends State<RootPage> {
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold();
   }
 }
