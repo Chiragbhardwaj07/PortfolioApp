@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:portfolio_c/projects.dart';
 
 class NavBar extends StatelessWidget {
   const NavBar({super.key});
@@ -46,7 +47,7 @@ class NavBar extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  '10',
+                  '6',
                   style: TextStyle(
                     fontSize: 15.0,
                     fontWeight: FontWeight.bold,
@@ -94,90 +95,49 @@ class NavBar extends StatelessWidget {
             SizedBox(
               height: 25,
             ),
-            Row(
-              children: [
-                Icon(
-                  Icons.book_rounded,
-                  size: 40,
-                  color: Colors.blueGrey[100],
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  'Projects',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blueGrey[100]),
-                ),
-              ],
+            ListTile(
+              leading: Icon(
+                Icons.person,
+                size: 40,
+                color: Colors.blueGrey[100],
+              ),
+              title: Text(
+                'About',
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, '/about');
+              },
             ),
-            SizedBox(
-              height: 25,
+            Divider(),
+            ListTile(
+              leading: Icon(
+                Icons.book,
+                size: 40,
+                color: Colors.blueGrey[100],
+              ),
+              title: Text(
+                'Projects',
+              ),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MyProject()));
+              },
             ),
-            Row(
-              children: [
-                Icon(
-                  Icons.call,
-                  size: 40,
-                  color: Colors.blueGrey[100],
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  'Contact',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blueGrey[100]),
-                ),
-              ],
+            Divider(),
+            ListTile(
+              leading: Icon(
+                Icons.call,
+                size: 40,
+                color: Colors.blueGrey[100],
+              ),
+              title: Text(
+                'Contact Me',
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, '/contact');
+              },
             ),
-            SizedBox(
-              height: 25,
-            ),
-            Row(
-              children: [
-                Icon(
-                  Icons.person,
-                  size: 40,
-                  color: Colors.blueGrey[100],
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  'About',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blueGrey[100]),
-                ),
-              ],
-            ),
-            Divider(
-              height: 370,
-              color: Colors.transparent,
-            ),
-            Row(
-              children: [
-                Icon(
-                  Icons.dark_mode,
-                  size: 40,
-                  color: Colors.blueGrey[100],
-                ),
-                SizedBox(
-                  width: 200,
-                ),
-                Icon(
-                  Icons.qr_code_2_outlined,
-                  size: 40,
-                  color: Colors.blueGrey[100],
-                ),
-              ],
-            )
+            Divider(),
           ],
         )
       ]),
