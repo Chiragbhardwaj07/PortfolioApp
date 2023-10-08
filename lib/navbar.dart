@@ -159,6 +159,7 @@ class NavBar extends StatelessWidget {
             ),
             Divider(
               height: 370,
+              color: Colors.transparent,
             ),
             Row(
               children: [
