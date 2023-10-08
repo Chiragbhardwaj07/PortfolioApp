@@ -1,12 +1,36 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/bi.dart';
 import 'package:iconify_flutter/icons/fa.dart';
 import 'package:iconify_flutter/icons/uiw.dart';
 import 'package:iconify_flutter/icons/cib.dart';
+
+class GradientText extends StatelessWidget {
+  const GradientText(
+    this.text, {
+    required this.gradient,
+    this.style,
+  });
+
+  final String text;
+  final TextStyle? style;
+  final Gradient gradient;
+
+  @override
+  Widget build(BuildContext context) {
+    return ShaderMask(
+      blendMode: BlendMode.srcIn,
+      shaderCallback: (bounds) => gradient.createShader(
+        Rect.fromLTWH(0, 0, bounds.width, bounds.height),
+      ),
+      child: Text(text, style: style),
+    );
+  }
+}
 
 class AboutMe extends StatelessWidget {
   const AboutMe({super.key});
@@ -16,6 +40,15 @@ class AboutMe extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blueGrey[900],
       appBar: AppBar(
+        title: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+          Text('About me'),
+          SizedBox(
+            width: 5,
+          ),
+          Icon(Icons.info),
+        ]),
+        centerTitle: true,
+
         backgroundColor: Colors.blueGrey[800],
         // elevation: 0,
       ),
@@ -51,12 +84,17 @@ class AboutMe extends StatelessWidget {
                           fontFamily: "Soho",
                           fontSize: 20),
                     ),
-                    Text('Chirag Bhardwaj',
-                        style: TextStyle(
-                            fontFamily: "Soho",
-                            color: Colors.white,
-                            fontSize: 40,
-                            fontWeight: FontWeight.bold)),
+                    GradientText(
+                      'Chirag Bhardwaj',
+                      style: const TextStyle(
+                          fontSize: 40, fontWeight: FontWeight.w900),
+                      gradient: LinearGradient(colors: [
+                        Colors.purple,
+                        // Colors.indigo,
+                        Colors.blue,
+                        Colors.cyan,
+                      ]),
+                    ),
                     SizedBox(
                       height: 2,
                     ),
@@ -104,11 +142,36 @@ class AboutMe extends StatelessWidget {
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Iconify(Bi.instagram),
-                            Iconify(Bi.facebook),
-                            Iconify(Fa.twitter),
-                            Iconify(Uiw.linkedin),
-                            Iconify(Cib.github),
+                            IconButton(
+                                onPressed: () {},
+                                icon: Icon(
+                                  FontAwesomeIcons.instagram,
+                                  color: Colors.blueGrey[100],
+                                )),
+                            IconButton(
+                                onPressed: () {},
+                                icon: Icon(
+                                  FontAwesomeIcons.facebook,
+                                  color: Colors.blueGrey[100],
+                                )),
+                            IconButton(
+                                onPressed: () {},
+                                icon: Icon(
+                                  FontAwesomeIcons.twitter,
+                                  color: Colors.blueGrey[100],
+                                )),
+                            IconButton(
+                                onPressed: () {},
+                                icon: Icon(
+                                  FontAwesomeIcons.linkedin,
+                                  color: Colors.blueGrey[100],
+                                )),
+                            IconButton(
+                                onPressed: () {},
+                                icon: Icon(
+                                  FontAwesomeIcons.github,
+                                  color: Colors.blueGrey[100],
+                                )),
                           ]),
                     ),
                   ],

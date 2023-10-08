@@ -9,7 +9,7 @@ import 'Home.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: '/myprojects',
+    initialRoute: '/home',
     routes: {
       '/home': (context) => Home(),
       '/myprojects': (context) => MyProject(),

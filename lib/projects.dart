@@ -87,7 +87,8 @@ class _MyProjectState extends State<MyProject> {
       backgroundColor: Colors.blueGrey[900],
       appBar: AppBar(
         backgroundColor: Colors.blueGrey[800],
-        title: Text('Projects'),
+        title: Text('My Projects'),
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Container(
