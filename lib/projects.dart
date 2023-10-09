@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MyProject extends StatefulWidget {
   const MyProject({Key? key}) : super(key: key);
@@ -66,10 +67,12 @@ class _MyProjectState extends State<MyProject> {
                   ),
                   Expanded(child: Container()),
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        launch('https://github.com/Chiragbhardwaj07');
+                      },
                       icon: Icon(
                         FontAwesomeIcons.github,
-                        color: Colors.white,
+                        color: Colors.blueGrey[100],
                       )),
                 ],
               )

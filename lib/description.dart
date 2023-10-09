@@ -2,12 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-import 'package:iconify_flutter/iconify_flutter.dart';
-import 'package:iconify_flutter/icons/bi.dart';
-import 'package:iconify_flutter/icons/fa.dart';
-import 'package:iconify_flutter/icons/uiw.dart';
-import 'package:iconify_flutter/icons/cib.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class GradientText extends StatelessWidget {
   const GradientText(
@@ -143,31 +138,43 @@ class AboutMe extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  launch(
+                                      'https://www.instagram.com/chiragbhardwaj07/');
+                                },
                                 icon: Icon(
                                   FontAwesomeIcons.instagram,
                                   color: Colors.blueGrey[100],
                                 )),
                             IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  launch('https://www.facebook.com/');
+                                },
                                 icon: Icon(
                                   FontAwesomeIcons.facebook,
                                   color: Colors.blueGrey[100],
                                 )),
                             IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  launch('https://twitter.com/akaChiragB');
+                                },
                                 icon: Icon(
                                   FontAwesomeIcons.twitter,
                                   color: Colors.blueGrey[100],
                                 )),
                             IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  launch(
+                                      'https://www.linkedin.com/in/chiragbhardwaj07/');
+                                },
                                 icon: Icon(
                                   FontAwesomeIcons.linkedin,
                                   color: Colors.blueGrey[100],
                                 )),
                             IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  launch('https://github.com/Chiragbhardwaj07');
+                                },
                                 icon: Icon(
                                   FontAwesomeIcons.github,
                                   color: Colors.blueGrey[100],
