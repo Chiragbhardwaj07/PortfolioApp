@@ -38,7 +38,7 @@ class AboutMe extends StatelessWidget {
         title: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
           Text('About me'),
           SizedBox(
-            width: 5,
+            width: 175,
           ),
           Icon(Icons.info),
         ]),
@@ -47,7 +47,7 @@ class AboutMe extends StatelessWidget {
         backgroundColor: Colors.blueGrey[800],
         // elevation: 0,
       ),
-      body: Container(
+      body: SingleChildScrollView(
         child: Stack(
           children: [
             ShaderMask(
@@ -133,53 +133,60 @@ class AboutMe extends StatelessWidget {
                     SizedBox(
                       height: 15,
                     ),
-                    Container(
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            IconButton(
-                                onPressed: () {
-                                  launch(
-                                      'https://www.instagram.com/chiragbhardwaj07/');
-                                },
-                                icon: Icon(
-                                  FontAwesomeIcons.instagram,
-                                  color: Colors.blueGrey[100],
-                                )),
-                            IconButton(
-                                onPressed: () {
-                                  launch('https://www.facebook.com/');
-                                },
-                                icon: Icon(
-                                  FontAwesomeIcons.facebook,
-                                  color: Colors.blueGrey[100],
-                                )),
-                            IconButton(
-                                onPressed: () {
-                                  launch('https://twitter.com/akaChiragB');
-                                },
-                                icon: Icon(
-                                  FontAwesomeIcons.twitter,
-                                  color: Colors.blueGrey[100],
-                                )),
-                            IconButton(
-                                onPressed: () {
-                                  launch(
-                                      'https://www.linkedin.com/in/chiragbhardwaj07/');
-                                },
-                                icon: Icon(
-                                  FontAwesomeIcons.linkedin,
-                                  color: Colors.blueGrey[100],
-                                )),
-                            IconButton(
-                                onPressed: () {
-                                  launch('https://github.com/Chiragbhardwaj07');
-                                },
-                                icon: Icon(
-                                  FontAwesomeIcons.github,
-                                  color: Colors.blueGrey[100],
-                                )),
-                          ]),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Container(
+                          child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                IconButton(
+                                    onPressed: () {
+                                      launch(
+                                          'https://www.instagram.com/chiragbhardwaj07/');
+                                    },
+                                    icon: Icon(
+                                      FontAwesomeIcons.instagram,
+                                      color: Colors.blueGrey[100],
+                                    )),
+                                IconButton(
+                                    onPressed: () {
+                                      launch('https://www.facebook.com/');
+                                    },
+                                    icon: Icon(
+                                      FontAwesomeIcons.facebook,
+                                      color: Colors.blueGrey[100],
+                                    )),
+                                IconButton(
+                                    onPressed: () {
+                                      launch('https://twitter.com/akaChiragB');
+                                    },
+                                    icon: Icon(
+                                      FontAwesomeIcons.twitter,
+                                      color: Colors.blueGrey[100],
+                                    )),
+                                IconButton(
+                                    onPressed: () {
+                                      launch(
+                                          'https://www.linkedin.com/in/chiragbhardwaj07/');
+                                    },
+                                    icon: Icon(
+                                      FontAwesomeIcons.linkedin,
+                                      color: Colors.blueGrey[100],
+                                    )),
+                                IconButton(
+                                    onPressed: () {
+                                      launch(
+                                          'https://github.com/Chiragbhardwaj07');
+                                    },
+                                    icon: Icon(
+                                      FontAwesomeIcons.github,
+                                      color: Colors.blueGrey[100],
+                                    )),
+                              ]),
+                        ),
+                      ],
                     ),
                   ],
                 ),

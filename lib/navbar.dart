@@ -97,13 +97,18 @@ class NavBar extends StatelessWidget {
             ),
             ListTile(
               leading: Icon(
-                Icons.person,
+                Icons.account_circle_rounded,
                 size: 40,
                 color: Colors.blueGrey[100],
               ),
+              trailing: Icon(Icons.arrow_forward_ios),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
               title: Text(
                 'About',
               ),
+              textColor: Colors.blueGrey[100],
+              iconColor: Colors.blueGrey[100],
               onTap: () {
                 Navigator.pushNamed(context, '/about');
               },
@@ -115,9 +120,14 @@ class NavBar extends StatelessWidget {
                 size: 40,
                 color: Colors.blueGrey[100],
               ),
+              trailing: Icon(Icons.arrow_forward_ios),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
               title: Text(
                 'Projects',
               ),
+              textColor: Colors.blueGrey[100],
+              iconColor: Colors.blueGrey[100],
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => MyProject()));
@@ -130,6 +140,11 @@ class NavBar extends StatelessWidget {
                 size: 40,
                 color: Colors.blueGrey[100],
               ),
+              trailing: Icon(Icons.arrow_forward_ios),
+              iconColor: Colors.blueGrey[100],
+              textColor: Colors.blueGrey[100],
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
               title: Text(
                 'Contact Me',
               ),
