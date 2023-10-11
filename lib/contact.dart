@@ -160,7 +160,13 @@ class _ContactMeState extends State<ContactMe> {
                             ),
                             Expanded(child: Container()),
                             IconButton(
-                                onPressed: () {},
+                                onPressed: () async {
+                                  final url =
+                                      Uri(scheme: 'tel', path: '9910832258');
+                                  if (await canLaunchUrl(url)) {
+                                    launchUrl(url);
+                                  }
+                                },
                                 icon: Icon(
                                   FontAwesomeIcons.phone,
                                   color: Colors.blueGrey[100],
@@ -217,15 +223,19 @@ class _ContactMeState extends State<ContactMe> {
                             ),
                             Expanded(child: Container()),
                             IconButton(
-                                onPressed: () {
-                                  final Uri smsLaunchUri = Uri(
+                                onPressed: () async {
+                                  final url = Uri(
                                     scheme: 'sms',
                                     path: '9910832258',
                                     queryParameters: <String, String>{
                                       'body':
-                                          Uri.encodeComponent('Hello Chirag'),
+                                          Uri.encodeComponent('HelloChirag'),
                                     },
                                   );
+
+                                  if (await canLaunchUrl(url)) {
+                                    launchUrl(url);
+                                  }
                                 },
                                 icon: Icon(
                                   FontAwesomeIcons.message,
