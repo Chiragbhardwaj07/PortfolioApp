@@ -41,71 +41,12 @@ class _ContactMeState extends State<ContactMe> {
     await launchUrl(launchUri);
   }
 
-  ContactCard(lang, title, description, icon, link) {
-    return Container(
-      width: MediaQuery.of(context).size.width * 0.9,
-      height: 220,
-      child: Card(
-        child: Container(
-          margin: EdgeInsets.only(left: 20, top: 30, right: 10),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                lang,
-                style: TextStyle(
-                  color: Colors.blueGrey[100],
-                  fontSize: 18,
-                ),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Text(
-                title,
-                style: TextStyle(
-                    color: Colors.blueGrey[100],
-                    fontSize: 30,
-                    fontWeight: FontWeight.w700),
-              ),
-              SizedBox(
-                height: 3,
-              ),
-              Text(
-                description,
-                style: TextStyle(color: Colors.blueGrey[100], fontSize: 16),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 4,
-                  ),
-                  Expanded(child: Container()),
-                  IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        FontAwesomeIcons.phone,
-                        color: Colors.blueGrey[100],
-                      )),
-                ],
-              )
-            ],
-          ),
-        ),
-        color: Color(0xff262628),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[900],
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey[800],
+        backgroundColor: Colors.black87,
         title: Text('Contact Me'),
         centerTitle: true,
       ),
@@ -120,6 +61,8 @@ class _ContactMeState extends State<ContactMe> {
                 width: MediaQuery.of(context).size.width * 0.9,
                 height: 220,
                 child: Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(30))),
                   child: Container(
                     margin: EdgeInsets.only(left: 20, top: 30, right: 10),
                     child: Column(
@@ -128,7 +71,7 @@ class _ContactMeState extends State<ContactMe> {
                         Text(
                           'Phone',
                           style: TextStyle(
-                            color: Colors.blueGrey[100],
+                            color: Colors.white,
                             fontSize: 18,
                           ),
                         ),
@@ -138,7 +81,7 @@ class _ContactMeState extends State<ContactMe> {
                         Text(
                           '9910832258',
                           style: TextStyle(
-                              color: Colors.blueGrey[100],
+                              color: Colors.white,
                               fontSize: 30,
                               fontWeight: FontWeight.w700),
                         ),
@@ -147,8 +90,7 @@ class _ContactMeState extends State<ContactMe> {
                         ),
                         Text(
                           '10AM - 6PM',
-                          style: TextStyle(
-                              color: Colors.blueGrey[100], fontSize: 16),
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
                         SizedBox(
                           height: 10,
@@ -169,7 +111,7 @@ class _ContactMeState extends State<ContactMe> {
                                 },
                                 icon: Icon(
                                   FontAwesomeIcons.phone,
-                                  color: Colors.blueGrey[100],
+                                  color: Colors.white,
                                 )),
                           ],
                         )
@@ -183,6 +125,8 @@ class _ContactMeState extends State<ContactMe> {
                 width: MediaQuery.of(context).size.width * 0.9,
                 height: 220,
                 child: Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(30))),
                   child: Container(
                     margin: EdgeInsets.only(left: 20, top: 30, right: 10),
                     child: Column(
@@ -191,7 +135,7 @@ class _ContactMeState extends State<ContactMe> {
                         Text(
                           'Message',
                           style: TextStyle(
-                            color: Colors.blueGrey[100],
+                            color: Colors.white,
                             fontSize: 18,
                           ),
                         ),
@@ -201,7 +145,7 @@ class _ContactMeState extends State<ContactMe> {
                         Text(
                           '9910832258',
                           style: TextStyle(
-                              color: Colors.blueGrey[100],
+                              color: Colors.white,
                               fontSize: 30,
                               fontWeight: FontWeight.w700),
                         ),
@@ -210,8 +154,7 @@ class _ContactMeState extends State<ContactMe> {
                         ),
                         Text(
                           '10AM - 6PM',
-                          style: TextStyle(
-                              color: Colors.blueGrey[100], fontSize: 16),
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
                         SizedBox(
                           height: 10,
@@ -239,7 +182,7 @@ class _ContactMeState extends State<ContactMe> {
                                 },
                                 icon: Icon(
                                   FontAwesomeIcons.message,
-                                  color: Colors.blueGrey[100],
+                                  color: Colors.white,
                                 )),
                           ],
                         )
@@ -253,6 +196,8 @@ class _ContactMeState extends State<ContactMe> {
                 width: MediaQuery.of(context).size.width * 0.9,
                 height: 220,
                 child: Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(30))),
                   child: Container(
                     margin: EdgeInsets.only(left: 20, top: 30, right: 10),
                     child: Column(
@@ -261,7 +206,7 @@ class _ContactMeState extends State<ContactMe> {
                         Text(
                           'Email',
                           style: TextStyle(
-                            color: Colors.blueGrey[100],
+                            color: Colors.white,
                             fontSize: 18,
                           ),
                         ),
@@ -271,7 +216,7 @@ class _ContactMeState extends State<ContactMe> {
                         Text(
                           'chiragbhardwaj1u@gmail.com',
                           style: TextStyle(
-                              color: Colors.blueGrey[100],
+                              color: Colors.white,
                               fontSize: 22,
                               fontWeight: FontWeight.w700),
                         ),
@@ -280,8 +225,7 @@ class _ContactMeState extends State<ContactMe> {
                         ),
                         Text(
                           '24hrs',
-                          style: TextStyle(
-                              color: Colors.blueGrey[100], fontSize: 16),
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
                         SizedBox(
                           height: 10,
@@ -307,7 +251,7 @@ class _ContactMeState extends State<ContactMe> {
                                 },
                                 icon: Icon(
                                   Icons.mail,
-                                  color: Colors.blueGrey[100],
+                                  color: Colors.white,
                                 )),
                           ],
                         )
@@ -321,6 +265,8 @@ class _ContactMeState extends State<ContactMe> {
                 width: MediaQuery.of(context).size.width * 0.9,
                 height: 220,
                 child: Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(30))),
                   child: Container(
                     margin: EdgeInsets.only(left: 20, top: 30, right: 10),
                     child: Column(
@@ -329,7 +275,7 @@ class _ContactMeState extends State<ContactMe> {
                         Text(
                           'Address',
                           style: TextStyle(
-                            color: Colors.blueGrey[100],
+                            color: Colors.white,
                             fontSize: 18,
                           ),
                         ),
@@ -339,7 +285,7 @@ class _ContactMeState extends State<ContactMe> {
                         Text(
                           'Ghaziabad',
                           style: TextStyle(
-                              color: Colors.blueGrey[100],
+                              color: Colors.white,
                               fontSize: 30,
                               fontWeight: FontWeight.w700),
                         ),
@@ -348,13 +294,11 @@ class _ContactMeState extends State<ContactMe> {
                         ),
                         Text(
                           '10AM - 6PM',
-                          style: TextStyle(
-                              color: Colors.blueGrey[100], fontSize: 16),
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
                         Text(
                           'Weekdays only',
-                          style: TextStyle(
-                              color: Colors.blueGrey[100], fontSize: 14),
+                          style: TextStyle(color: Colors.white, fontSize: 14),
                         ),
                         SizedBox(
                           height: 10,
@@ -372,7 +316,7 @@ class _ContactMeState extends State<ContactMe> {
                                 },
                                 icon: Icon(
                                   Icons.location_city,
-                                  color: Colors.blueGrey[100],
+                                  color: Colors.white,
                                 )),
                           ],
                         )
@@ -385,6 +329,65 @@ class _ContactMeState extends State<ContactMe> {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget ContactCard(lang, title, description, icon) {
+    return Container(
+      width: double.infinity,
+      height: 220,
+      child: Card(
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(30))),
+        child: Container(
+          margin: EdgeInsets.only(left: 20, top: 30, right: 10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                lang,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Text(
+                title,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 30,
+                    fontWeight: FontWeight.w700),
+              ),
+              SizedBox(
+                height: 3,
+              ),
+              Text(
+                description,
+                style: TextStyle(color: Colors.white, fontSize: 16),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 4,
+                  ),
+                  Expanded(child: Container()),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(icon),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
+        color: Color(0xff262628),
       ),
     );
   }

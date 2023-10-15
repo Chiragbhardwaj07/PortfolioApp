@@ -10,85 +10,32 @@ class NavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Drawer(
-      backgroundColor: Colors.blueGrey[800],
+      backgroundColor: Colors.black,
       child: ListView(padding: EdgeInsets.fromLTRB(10, 20, 5, 10), children: [
+        UserAccountsDrawerHeader(
+          accountName: const Text(
+            'Chirag Bhardwaj',
+            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          ),
+          accountEmail: const Text(
+            ' chiragbhardwaj07',
+            style:
+                TextStyle(fontStyle: FontStyle.italic, color: Colors.white70),
+          ),
+          currentAccountPicture: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: CircleAvatar(
+              radius: 30,
+              backgroundImage: AssetImage('assets/profile.jpg'),
+            ),
+          ),
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/navbar.jpg'), fit: BoxFit.cover)),
+        ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CircleAvatar(
-                radius: 32,
-                backgroundColor: Colors.blueGrey[300],
-                child: CircleAvatar(
-                  radius: 30,
-                  backgroundImage: AssetImage('assets/profile.jpg'),
-                )),
-            SizedBox(
-              height: 15,
-            ),
-            Text(
-              'Chirag Bhardwaj',
-              style: TextStyle(
-                fontSize: 30.0,
-                fontWeight: FontWeight.bold,
-                color: Colors.blueGrey[100],
-              ),
-            ),
-            Text(
-              'Student',
-              style: TextStyle(
-                fontSize: 15.0,
-                fontWeight: FontWeight.normal,
-                color: Colors.blueGrey[500],
-              ),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Row(
-              children: [
-                Text(
-                  '6',
-                  style: TextStyle(
-                    fontSize: 15.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blueGrey[100],
-                  ),
-                ),
-                SizedBox(
-                  width: 5,
-                ),
-                Text(
-                  'Projects',
-                  style: TextStyle(
-                    fontSize: 15.0,
-                    fontWeight: FontWeight.normal,
-                    color: Colors.blueGrey[500],
-                  ),
-                ),
-                SizedBox(
-                  width: 15,
-                ),
-                Text(
-                  '1296',
-                  style: TextStyle(
-                    fontSize: 15.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blueGrey[100],
-                  ),
-                ),
-                SizedBox(
-                  width: 5,
-                ),
-                Text(
-                  'Ratings',
-                  style: TextStyle(
-                    fontSize: 15.0,
-                    fontWeight: FontWeight.normal,
-                    color: Colors.blueGrey[500],
-                  ),
-                ),
-              ],
-            ),
             SizedBox(
               height: 25,
             ),
@@ -99,7 +46,7 @@ class NavBar extends StatelessWidget {
               leading: Icon(
                 Icons.account_circle_rounded,
                 size: 40,
-                color: Colors.blueGrey[100],
+                color: Colors.white,
               ),
               trailing: Icon(Icons.arrow_forward_ios),
               shape: RoundedRectangleBorder(
@@ -107,8 +54,8 @@ class NavBar extends StatelessWidget {
               title: Text(
                 'About',
               ),
-              textColor: Colors.blueGrey[100],
-              iconColor: Colors.blueGrey[100],
+              textColor: Colors.white,
+              iconColor: Colors.white,
               onTap: () {
                 Navigator.pushNamed(context, '/about');
               },
@@ -118,7 +65,7 @@ class NavBar extends StatelessWidget {
               leading: Icon(
                 Icons.book,
                 size: 40,
-                color: Colors.blueGrey[100],
+                color: Colors.white,
               ),
               trailing: Icon(Icons.arrow_forward_ios),
               shape: RoundedRectangleBorder(
@@ -126,8 +73,8 @@ class NavBar extends StatelessWidget {
               title: Text(
                 'Projects',
               ),
-              textColor: Colors.blueGrey[100],
-              iconColor: Colors.blueGrey[100],
+              textColor: Colors.white,
+              iconColor: Colors.white,
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => MyProject()));
@@ -138,11 +85,11 @@ class NavBar extends StatelessWidget {
               leading: Icon(
                 Icons.call,
                 size: 40,
-                color: Colors.blueGrey[100],
+                color: Colors.white,
               ),
               trailing: Icon(Icons.arrow_forward_ios),
-              iconColor: Colors.blueGrey[100],
-              textColor: Colors.blueGrey[100],
+              iconColor: Colors.white,
+              textColor: Colors.white,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20)),
               title: Text(

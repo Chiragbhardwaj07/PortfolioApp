@@ -33,18 +33,14 @@ class AboutMe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[900],
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
           Text('About me'),
-          SizedBox(
-            width: 175,
-          ),
-          Icon(Icons.info),
         ]),
         centerTitle: true,
 
-        backgroundColor: Colors.blueGrey[800],
+        backgroundColor: Colors.black12,
         // elevation: 0,
       ),
       body: SingleChildScrollView(
@@ -68,7 +64,7 @@ class AboutMe extends StatelessWidget {
               child: Container(
                 alignment: Alignment.center,
                 margin: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.35),
+                    top: MediaQuery.of(context).size.height * 0.38),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -104,18 +100,18 @@ class AboutMe extends StatelessWidget {
                         Text(
                           'I am a sophmore in Ajay Kumar Garg Engineering College studying Artificial Intelligence & Machine Learning. I am currently a trainee in TEAM CONNATUS. My areas of intrest include App Devlopment, Competetive Programming and Open Source. ',
                           style: TextStyle(
-                            color: Colors.blueGrey[100],
+                            color: Colors.white,
                             fontSize: 20,
                           ),
                         ),
                       ]),
                     ),
                     SizedBox(
-                      height: 60,
+                      height: 50,
                     ),
                     Divider(
                       height: 20.0,
-                      color: Colors.blueGrey[800],
+                      color: Colors.black12,
                     ),
                     Center(
                       child: Container(
@@ -124,7 +120,7 @@ class AboutMe extends StatelessWidget {
                           'Connect:',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: Colors.blueGrey[100],
+                            color: Colors.white,
                             fontSize: 20,
                           ),
                         ),
@@ -148,7 +144,7 @@ class AboutMe extends StatelessWidget {
                                     },
                                     icon: Icon(
                                       FontAwesomeIcons.instagram,
-                                      color: Colors.blueGrey[100],
+                                      color: Colors.white,
                                     )),
                                 IconButton(
                                     onPressed: () {
@@ -156,15 +152,16 @@ class AboutMe extends StatelessWidget {
                                     },
                                     icon: Icon(
                                       FontAwesomeIcons.facebook,
-                                      color: Colors.blueGrey[100],
+                                      color: Colors.white,
                                     )),
                                 IconButton(
+                                    iconSize: 20,
                                     onPressed: () {
                                       launch('https://twitter.com/akaChiragB');
                                     },
                                     icon: Icon(
                                       FontAwesomeIcons.twitter,
-                                      color: Colors.blueGrey[100],
+                                      color: Colors.white,
                                     )),
                                 IconButton(
                                     onPressed: () {
@@ -173,7 +170,7 @@ class AboutMe extends StatelessWidget {
                                     },
                                     icon: Icon(
                                       FontAwesomeIcons.linkedin,
-                                      color: Colors.blueGrey[100],
+                                      color: Colors.white,
                                     )),
                                 IconButton(
                                     onPressed: () {
@@ -182,7 +179,7 @@ class AboutMe extends StatelessWidget {
                                     },
                                     icon: Icon(
                                       FontAwesomeIcons.github,
-                                      color: Colors.blueGrey[100],
+                                      color: Colors.white,
                                     )),
                               ]),
                         ),

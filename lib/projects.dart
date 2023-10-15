@@ -3,6 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:iconify_flutter/iconify_flutter.dart';
+// ignore: depend_on_referenced_packages
+import 'package:colorful_iconify_flutter/icons/vscode_icons.dart';
+// ignore: depend_on_referenced_packages
+import 'package:colorful_iconify_flutter/icons/logos.dart';
 
 class MyProject extends StatefulWidget {
   const MyProject({Key? key}) : super(key: key);
@@ -12,22 +17,34 @@ class MyProject extends StatefulWidget {
 }
 
 class _MyProjectState extends State<MyProject> {
-  projetCard(lang, title, description, star) {
+  projetCard(lang, title, description, star, icon) {
     return Container(
       width: MediaQuery.of(context).size.width * 0.9,
       height: 220,
       child: Card(
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(30))),
         child: Container(
           margin: EdgeInsets.only(left: 20, top: 30, right: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                lang,
-                style: TextStyle(
-                  color: Colors.blueGrey[100],
-                  fontSize: 18,
-                ),
+              Row(
+                children: [
+                  Iconify(
+                    icon,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    lang,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                    ),
+                  ),
+                ],
               ),
               SizedBox(
                 height: 15,
@@ -35,7 +52,7 @@ class _MyProjectState extends State<MyProject> {
               Text(
                 title,
                 style: TextStyle(
-                    color: Colors.blueGrey[100],
+                    color: Colors.white,
                     fontSize: 30,
                     fontWeight: FontWeight.w700),
               ),
@@ -44,7 +61,7 @@ class _MyProjectState extends State<MyProject> {
               ),
               Text(
                 description,
-                style: TextStyle(color: Colors.blueGrey[100], fontSize: 16),
+                style: TextStyle(color: Colors.white, fontSize: 16),
               ),
               SizedBox(
                 height: 10,
@@ -53,7 +70,7 @@ class _MyProjectState extends State<MyProject> {
                 children: [
                   Icon(
                     Icons.star,
-                    color: Colors.blueGrey[200],
+                    color: Colors.white70,
                     size: 18,
                   ),
                   SizedBox(
@@ -62,7 +79,7 @@ class _MyProjectState extends State<MyProject> {
                   Text(
                     star,
                     style: TextStyle(
-                      color: Colors.blueGrey[100],
+                      color: Colors.white,
                     ),
                   ),
                   Expanded(child: Container()),
@@ -72,7 +89,7 @@ class _MyProjectState extends State<MyProject> {
                       },
                       icon: Icon(
                         FontAwesomeIcons.github,
-                        color: Colors.blueGrey[100],
+                        color: Colors.white,
                       )),
                 ],
               )
@@ -87,9 +104,9 @@ class _MyProjectState extends State<MyProject> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[900],
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey[800],
+        backgroundColor: Colors.black,
         title: Text('My Projects'),
         centerTitle: true,
       ),
@@ -100,15 +117,32 @@ class _MyProjectState extends State<MyProject> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              projetCard('FLUTTER', 'Portfolio App', 'A personal portfolio',
+                  '10', Logos.flutter),
+              projetCard('FLUTTER', 'Quiz App', 'App for MCQ Quiz', '9',
+                  Logos.flutter),
               projetCard(
-                  'FLUTTER', 'Portfolio App', 'A personal portfolio', '10'),
-              projetCard('FLUTTER', 'Quiz App', 'App for MCQ Quiz', '9'),
-              projetCard('PYTHON', 'AI Legal Doc maker',
-                  'AI creates legally binding documents', '8'),
-              projetCard('C++', 'Tic-Tac-Toe', 'Simple game', '7'),
-              projetCard('C', 'Calculator', 'Basic arithmetic operations', '8'),
+                  'PYTHON',
+                  'AI Legal Doc maker',
+                  'AI creates legally binding documents',
+                  '8',
+                  VscodeIcons.file_type_python),
               projetCard(
-                  'PYTHON', 'Social Media App', 'Interact with friends', '9'),
+                'C++',
+                'Tic-Tac-Toe',
+                'Simple game',
+                '7',
+                VscodeIcons.file_type_cpp3,
+              ),
+              projetCard('PYTHON', 'Social Media App', 'Interact with friends',
+                  '9', VscodeIcons.file_type_python),
+              projetCard(
+                'C++',
+                'Calculator',
+                'Basic arithmetic operations',
+                '8',
+                VscodeIcons.file_type_cpp3,
+              ),
             ],
           ),
         ),

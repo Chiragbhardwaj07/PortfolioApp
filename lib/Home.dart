@@ -15,11 +15,11 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[900],
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: const Text('Portfolio'),
         centerTitle: true,
-        backgroundColor: Colors.blueGrey[800],
+        backgroundColor: Colors.black12,
         elevation: 0.0,
       ),
       drawer: NavBar(),
@@ -32,20 +32,24 @@ class Home extends StatelessWidget {
               child: Container(
                   child: CircleAvatar(
                       radius: 67,
-                      backgroundColor: Colors.blueGrey[300],
+                      backgroundColor: Colors.white60,
                       child: CircleAvatar(
-                        radius: 65,
-                        backgroundImage: AssetImage('assets/profile.jpg'),
+                        radius: 65.4,
+                        backgroundColor: Colors.black,
+                        child: CircleAvatar(
+                          radius: 65,
+                          backgroundImage: AssetImage('assets/profile.jpg'),
+                        ),
                       ))),
             ),
             Divider(
               height: 40.0,
-              color: Colors.blueGrey[800],
+              color: Colors.black54,
             ),
             Text(
               'Name',
               style: TextStyle(
-                color: Colors.blueGrey[400],
+                color: Colors.white54,
                 letterSpacing: 2.0,
               ),
             ),
@@ -53,7 +57,7 @@ class Home extends StatelessWidget {
             Text(
               'Chirag Bhardwaj',
               style: TextStyle(
-                color: Colors.blueGrey[100],
+                color: Colors.white,
                 letterSpacing: 2.0,
                 fontSize: 30.0,
                 fontWeight: FontWeight.bold,
@@ -65,7 +69,7 @@ class Home extends StatelessWidget {
             Text(
               'Branch',
               style: TextStyle(
-                color: Colors.blueGrey[400],
+                color: Colors.white54,
                 letterSpacing: 2.0,
               ),
             ),
@@ -73,7 +77,7 @@ class Home extends StatelessWidget {
             Text(
               'AIML',
               style: TextStyle(
-                color: Colors.blueGrey[100],
+                color: Colors.white,
                 letterSpacing: 2.0,
                 fontSize: 30.0,
                 fontWeight: FontWeight.bold,
@@ -83,7 +87,7 @@ class Home extends StatelessWidget {
             Text(
               'Designation',
               style: TextStyle(
-                color: Colors.blueGrey[400],
+                color: Colors.white54,
                 letterSpacing: 2.0,
               ),
             ),
@@ -91,7 +95,7 @@ class Home extends StatelessWidget {
             Text(
               'Trainee',
               style: TextStyle(
-                color: Colors.blueGrey[100],
+                color: Colors.white,
                 letterSpacing: 2.0,
                 fontSize: 30.0,
                 fontWeight: FontWeight.bold,
@@ -103,7 +107,7 @@ class Home extends StatelessWidget {
             Text(
               'Skills',
               style: TextStyle(
-                color: Colors.blueGrey[400],
+                color: Colors.white54,
                 letterSpacing: 2.0,
               ),
             ),
@@ -113,33 +117,63 @@ class Home extends StatelessWidget {
             Row(
               // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Iconify(VscodeIcons.file_type_cpp3),
+                Iconify(
+                  VscodeIcons.file_type_cpp3,
+                  size: 40,
+                ),
                 SizedBox(
                   width: 10.0,
                 ),
-                Iconify(VscodeIcons.file_type_python),
-                SizedBox(
-                  width: 15.0,
+                Iconify(
+                  VscodeIcons.file_type_python,
+                  size: 40,
                 ),
-                Iconify(Logos.html_5),
-                SizedBox(
-                  width: 15.0,
-                ),
-                Iconify(Logos.css_3),
-                SizedBox(
-                  width: 15.0,
-                ),
-                Iconify(Logos.javascript),
-                SizedBox(
-                  width: 15.0,
-                ),
-                Iconify(Logos.flutter),
                 SizedBox(
                   width: 15.0,
                 ),
                 Iconify(
-                  VscodeIcons.file_type_dartlang,
+                  Logos.html_5,
+                  size: 40,
                 ),
+                SizedBox(
+                  width: 15.0,
+                ),
+                Iconify(
+                  Logos.css_3,
+                  size: 40,
+                ),
+                SizedBox(
+                  width: 15.0,
+                ),
+                Iconify(
+                  Logos.javascript,
+                  size: 40,
+                ),
+                SizedBox(
+                  width: 15.0,
+                ),
+                Iconify(
+                  Logos.flutter,
+                  size: 40,
+                ),
+                SizedBox(
+                  width: 15.0,
+                ),
+                //   Iconify(
+                //     VscodeIcons.file_type_dartlang,
+                //   ),
+                //   SizedBox(
+                //     width: 15.0,
+                //   ),
+                //   Iconify(
+                //     Logos.java,
+                //   ),
+                //   SizedBox(
+                //     width: 15.0,
+                //   ),
+                //   Iconify(
+                //     Logos.kotlin,
+                //   ),
               ],
             ),
             SizedBox(
@@ -159,8 +193,7 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 style: TextButton.styleFrom(
-                    backgroundColor: Colors.blueGrey[100],
-                    primary: Colors.blueGrey[900]),
+                    backgroundColor: Colors.white, primary: Colors.black),
               ),
             )
           ],
